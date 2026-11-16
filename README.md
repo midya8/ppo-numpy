@@ -128,3 +128,22 @@ bash examples/verify_clip_wheel.sh
 ```
 
 The current suite has 64 Python tests and seven Node/actual-Chrome tests. The added tests cover 351 exhaustive signed-advantage reports at three clipping widths, independent cell enumeration, exact simplex-grid controls, all-leaf tampering, strict APIs/CLIs and the unchanged original NumPy loss with correctly old-probability-weighted batches. Actual Chrome visits all 135 policy states, 60 responsive layouts and 2,658 exact policy table cells, invalidates stale results on trusted editing, and downloads two real JSON Blobs for native regeneration and independent replay.
+
+## Installed-suite replay
+
+Run `python examples/check_installed_suite.py` after installing the project's
+NumPy, Matplotlib, Pillow, pytest, setuptools and wheel requirements. The helper
+builds a wheel, installs it in a temporary environment and runs all 64 Python
+tests outside the checkout. It checks all ten package-module origins before
+and after. The copied `src` tree is inert input for the existing hash and data
+tests, never an import root; package imports must come from the installed wheel.
+Dependencies are shared from the host, while pytest is installed in the test
+environment. The existing training, regeneration and wheel checks stay in CI.
+
+The command replay checks all 26 boundary/loss and ten exact clip-face reports,
+including every JSON leaf, through both module and console commands. It also
+runs both independent-verifier entrypoints on each produced clip-face report:
+112 command invocations across six entrypoints. These are same-runtime
+packaging checks, not new training runs, new numerical references or evidence
+that PPO clipping constrains every optimal policy to a ratio box. The original
+checkpoint, historical run, arithmetic, fixtures and tolerances are unchanged.

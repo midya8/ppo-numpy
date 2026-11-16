@@ -44,3 +44,20 @@ jobs:
       - run: pip install numpy matplotlib pillow setuptools wheel
       - run: bash examples/verify_wheel.sh
       - run: bash examples/verify_clip_wheel.sh
+
+  installed-suite:
+    runs-on: ubuntu-latest
+    env:
+      OPENBLAS_NUM_THREADS: '1'
+      OMP_NUM_THREADS: '1'
+      MPLBACKEND: Agg
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install numpy matplotlib pillow pytest setuptools wheel
+      - run: python examples/check_installed_suite.py --section tests
+      - run: python examples/check_installed_suite.py --section commands
