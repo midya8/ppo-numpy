@@ -6,7 +6,7 @@ This extension audits the single-state full old-policy expectation of the standa
 
 Clipping a term in an objective is different from restricting the policy's probability ratio. What are *all* policies attaining the best clipped objective? How close or far can those equally optimal policies be from the old policy? Which exact witnesses prove those claims?
 
-[Interactive exact face inspector](https://midya8.github.io/ppolab/clip.html).
+[Interactive exact face inspector](https://midya8.github.io/ppo-numpy/clip.html).
 
 The implementation is a small original audit of established PPO and separable concave optimization, not a new PPO algorithm, trust-region method, benchmark or training result. The mathematical counterexample is developed for inspection, not sampled from CartPole.
 
