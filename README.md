@@ -1,4 +1,4 @@
-# ppolab
+# Ppo numpy
 
 A NumPy implementation of Proximal Policy Optimization for CartPole, including
 the clipped surrogate, GAE(lambda), Adam and the environment equations. The
@@ -62,7 +62,7 @@ MIT
 
 ## Episode-boundary fix and browser audit
 
-The [live boundary inspector](https://midya8.github.io/ppolab/) computes the
+The [live boundary inspector](https://midya8.github.io/ppo-numpy/) computes the
 entire shipped network and CartPole physics in scalar JavaScript. Replay all
 30 original evaluation/gate initial states, inspect every step, or enter a
 new state. These are newly computed scalar paths, not exact original NumPy
@@ -113,7 +113,7 @@ sources, numeric tolerances, finite-horizon interpretation and replay limits.
 
 ## Exact clipped-objective policy faces
 
-[Open the exact policy-face inspector](https://midya8.github.io/ppolab/clip.html) · [Proof, schema, sources and limits](CLIP_FACE.md)
+[Open the exact policy-face inspector](https://midya8.github.io/ppo-numpy/clip.html) · [Proof, schema, sources and limits](CLIP_FACE.md)
 
 A separate exact-rational optimizer exposes every optimal policy of a supplied single-state categorical PPO clipped surrogate, rather than one update. Supporting-line dual bounds meet explicit witnesses. A separate verifier enumerates every piecewise cell's vertices without importing the optimizer, and an independently written BigInt browser engine reproduces the complete reports. Exact coordinate ranges, all face vertices, nearest/farthest total-variation witnesses and positive-support limits remain visible.
 
