@@ -119,7 +119,7 @@ A separate exact-rational optimizer exposes every optimal policy of a supplied s
 
 For the centered control p=(1/10,9/10), A=(9,-1), epsilon=1/5, the actual clipped-objective optimum is 9/25. Adding a real hard ratio box reduces it to 1/5. The unconstrained optimal face has q0 in [7/25,1], TV from 9/50 to 9/10, and a strictly positive optimal family with unbounded old-to-new KL as it approaches a zero-support vertex. KL claims use support arguments, not rounded logarithms. A forced-zero control separately shows that some problems have no fully supported exact optimum.
 
-These are exact full old-policy expectations on 2–6 supplied actions, not sampled minibatches, SGD trajectories, entropy/value losses or new training results. The original trainer, checkpoint, 50 earlier Python tests, four Node/Chrome tests and all earlier audit artifacts remain intact. Clipping/trust-region limitations are established results, not a claimed new discovery.
+These are exact full old-policy expectations on 2-6 supplied actions, not sampled minibatches, SGD trajectories, entropy/value losses or new training results. The original trainer, checkpoint, 50 earlier Python tests, four Node/Chrome tests and all earlier audit artifacts remain intact. Clipping/trust-region limitations are established results, not a claimed new discovery.
 
 ```bash
 python -m ppolab.clipface input.json > report.json
